@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+
+ * {
+     box-sizing: border-box;
+     padding:0;
+     margin:0;
+     font-family: "source sans pro", sans-serif;
+     list-style: none;
+ }
+ 
+ body {
+     margin: 30px;
+     background: rgb(248, 246, 246);
+ }
+ 
+ header,nav {
+     border: 1px solid gray;
+     padding: 15px;
+     background: -webkit-linear-gradient(left, rgb(224, 158, 119), #f44);
+     ;
+     text-align: center;
+     margin-bottom: 10px;
+     color: white;
+ }
+
+ .logo-nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.nav {
+     flex-basis: 18.750em; 
+ }
+
+ h1,h2,p,progress {
+    color: rgb(51, 50, 50);
+    margin-bottom: 10px;
+}
+
+
+
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width:100%;
+    height:1.250em;
+}
+
+progress[value]::-webkit-progress-bar {
+    background: rgb(235, 233, 233);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgb(235, 233, 233) inset;
+
+
+}
+
+progress[value]::-webkit-progress-value {
+    background-image:
+    -webkit-linear-gradient(-45deg, 
+                            transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                            rgba(0,0, 0, .1) 66%, transparent 66%),
+    -webkit-linear-gradient(top, 
+                            rgba(255, 255, 255, .25), 
+                            rgba(0, 0, 0, .25)),
+    -webkit-linear-gradient(left, #09c, #f44);
+    transition: width 5s ease;
+ border-radius: 2px; 
+ background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+fieldset {
+    border: 0 none;
+    border-bottom: 1px solid gray;
+    margin: 10px;
+    
+}
+
+legend {
+    display: none;
+}
+
+form {
+margin: 10px 50px 50px 0;
+}
+
+input[type="text"],input[type="email"],input[type="password"] {
+    width: 250px;
+    height: 3.5em;
+    margin: 10px 0 10px 20px;;
+    box-shadow: 1px 1px 0 0 rgb(236, 235, 235);  
+    
+}
+
+label {
+    display: inline-block;
+    font-weight: 700;
+    margin-right: 0.5em;
+    text-align: right;
+    width:11em;
+    font: 15px/1.7 'source sans pro', sans-serif;
+     color: #333;
+     -webkit-font-smoothing: antialiased;
+     cursor: pointer;
+}
+
+
+textarea {
+    width: 500px;
+    resize: none;
+    margin: 40px 0 0 20px;
+    border: 2px solid rgb(179, 177, 177);
+}
+
+textarea:focus {
+    outline: 3px solid rgb(199, 156, 92);
+
+}
+
+label.description {
+margin-bottom: 20px;
+}
+ span {
+font-size: 11px;
+font-style: italic;
+margin: 20px;
+
+}
+
+input[type="radio"]:focus {
+    outline: none;
+}
+input[type="checkbox"]:focus {
+    outline: none;
+}
+input[type="text"]:focus {
+    outline: 3px solid rgb(199, 156, 92);
+}
+
+input[type="email"]:focus {
+    outline: 3px solid rgb(199, 156, 92);
+ 
+}
+
+input[type="password"]:focus {
+    outline: 3px solid rgb(199, 156, 92);
+
+}
+
+input[type=checkbox]:checked ~ .shipping {
+    display: none;
+ }
+
+
+
+button {
+  width: 150px;
+  height: 60px;
+  text-align: center;
+  float: right;
+  background: -webkit-linear-gradient(left, rgb(224, 158, 119), #f44);
+  font-size: 16px;
+  color: white;
+
+}
+
+input:focus-within {
+    font-size: 15px;
+}
+input[type="checkbox"],input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;     
+    margin-right: 7px;
+    border: 1px solid rgb(110, 109, 109);
+
+}
+
+input[list="countryData"] {
+    -webkit-appearance: none;
+     appearance: none;
+}
+
+input[type="radio"]:checked::before {
+    position:absolute;
+    font: 13px/1 'source sans pro', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+     z-index: 2;
+
+}
+
+input[type="radio"]:hover
+{
+     background-color: #dab9b9;
+}
+input[type="radio"]:checked{
+     background-color: #b1afaf;
+}*/
+
+input[type="checkbox"] {
+    border-radius: 3px;
+
+}
+
+input[type="checkbox"] {
+    border-radius: 3px;
+}
+
+input[type="checkbox"]:checked{
+
+    background: rgb(99, 98, 98);
+
+}
+
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+    border-radius: 3px;
+}
+
+
+
+input.field-width {
+    width: 60px;
+}
+
+label.expiry-year {
+text-align: left;
+width: 5em;
+}
+
+input#expiry-year {
+   margin-left: 5px;
+}
+
+.tabs {
+    width: 30px;
+    height: 30px;
+    border: 2px solid gray;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 30px;
+    
+}
+
+#tabs-container {
+    text-align: center;
+
+}
+span.tabs {
+    color: black;
+    padding: 5px;
+}
+ 
+.page-highlight {
+    background: -webkit-linear-gradient(left, rgb(224, 158, 119), #f44);
+}
+ 
+@media only screen and (max-width: 600px) {
+     label.description span {
+         display: block;
+     }
+    textarea {
+        margin-top: 10px;
+        width: 200px;
+    }
+    label.expiry-year {
+        text-align: right;
+        width: 12.5em;
+        }
+        
+        input#expiry-year {
+           margin-left: 0;
+        }

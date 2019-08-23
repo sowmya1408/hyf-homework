@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step4</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+        <div id="tabs-container">
+                <p>Click below for first page</p>
+
+                <a href="index.html"><span class="tabs ">1</span</a>
+         
+                <a href="step2.html"><span class="tabs">2</span</a>
+                 <a href="step3.html"><span class="tabs ">3</span</a>
+                     <a href="step4.html"><span class="tabs page-highlight ">4</span</a>
+         
+                 </a>
+             </div>
+
+        <fieldset>
+                <legend>Form</legend>
+                <div class="logo-nav-container">
+                    <header>logo</header>
+                    <nav class="nav">Navigation</nav>
+                </div>
+                <h1>Sign up to yourcustomtailor.com</h1>
+                <h2>Step 4/4 - Payment</h2>
+                <progress value="95" max="100">Progress</progress>
+                <p>Please fill in your payment data</p>
+                <form>
+                    <div>
+        
+                        <label for="card-name">Name on card</label>
+                        <input type="text" id="card-name" name="card-name" required>
+                    </div>
+                    <div>
+        
+                        <label for="card-type">Card type</label>
+                        <input type="text" id="card-type" name="card-type" list="typeOfcard" required>
+        
+        
+                        <datalist id="typeOfcard">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="masterocard">Masterocard</option>
+                            <option value="dankort">Dankort</option>
+                        </datalist>
+                    </div>
+                    <div>
+        
+                        <label for="creditcard-number">Credit card number</label>
+                        <input type="text" id="creditcard-number" name="creditcard-number" minlength="14" maxlength="16"
+                            pattern="[0-9]" required>
+                        <label for="firstname">First name</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="payment-element">
+        
+                        <label for="expiry-month">Expiry month</label>
+                        <input class="field-width" id="expiry-month" type="text" pattern="([0-9]{2}[/]?){2}" required>
+                        <label class="expiry-year" for="expiry-year">Expiry year</label>
+                        <input class="field-width" id="expiry-year" type="text" pattern="([0-9]{2}[/]?){2}" required>
+                    </div>
+                    <div class="payment-element">
+        
+                        <label for="cvv">CVV</label>
+                        <input class="field-width" type="text" id="cvv" name="cvv" required>
+                    </div>
+                    <button>Next step</button>
+                </form>
+            </fieldset>
+</body>
+</html>
