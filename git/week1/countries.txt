@@ -2,3 +2,4 @@ switzerland
 Italy
 Sweden
 Hungary
+Norway
