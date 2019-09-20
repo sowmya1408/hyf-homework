@@ -5,7 +5,7 @@ const activities = [];
 function addActivity (activity,duration) {
     const todayDate = new Date();  
     const date = todayDate.toLocaleDateString(); // function to figure out date     
-   if (!date === "string" && activity === "string" && duration === "number") {
+   if (!(typeof(date) === "string" && typeof(activity) === "string" && typeof(duration) === "number")) {
        return "Enter date & activity in text and duration as number";
    } else {
        activities.push({date,activity,duration});
