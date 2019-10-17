@@ -32,13 +32,13 @@ const logsSaturn = () => {
 }
 
 function planetLogFunction(planet) { 
-    console.log(planet);
+    planet();
 }
 
 planetLogFunction(logsEarth);
 planetLogFunction(logsSaturn);
 
-//5. Log location
+ //5. Log location
 const body = document.querySelector('body');
 const btnLocation = document.querySelector('.logLocation');
 const para = document.createElement('p');
@@ -57,6 +57,7 @@ navigator.geolocation.getCurrentPosition(showPosition);
 function showPosition(position) {
     para.textContent = `This is the Latitude: ${position.coords.latitude}`
     para1.textContent =  `This is the Longitude: ${position.coords.longitude}`
+    renderLocationOnGoogleMap(position.coords.latitude, position.coords.longitude);
    
 }
 
