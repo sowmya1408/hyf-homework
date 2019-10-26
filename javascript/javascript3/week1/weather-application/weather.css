@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background-image: url('backgroundWeatherImage.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'ZCOOL XiaoWei', serif;
+  
+
+}
+
+h1 {
+    color: #fff;
+    margin: 35px;
+}
+
+input {
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+button {
+    height: 40px;
+    width: 15%;
+    background-color: rgb(238, 238, 174);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+h2,h3 {
+    color: rgb(43, 39, 228);
+    margin: 10px;
+    font-size: 30px;
+}
+
+main {
+    display: flex;
+}
+
+main > ul {
+    margin: 20px;
+    color: #fff;
+    text-align: center; 
+    margin-left: 60px;
+}
+
+main > ul > li {
+    margin: 10px;
+    padding: 5px;
+}
+
+p {
+    color: red;
+    margin: 10px;
+}
+
+.weatherDiv {
+    margin-top: 10px;
+    text-align: center;
+}
