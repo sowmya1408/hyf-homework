@@ -1,0 +1,16 @@
+[
+   {
+        "petType": "dog",
+        "name": "browny",
+        "age": 2,
+        "food": ["pedegree","carrots","meat"],
+        "mood": ["happy","sad"]
+    },
+    {
+        "petType": "Cat",
+        "name": "Katty",
+        "age": 3,
+        "food": "milk",
+        "mood": ["happy","sad"]
+    }
+]
