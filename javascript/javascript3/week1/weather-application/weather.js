@@ -17,9 +17,9 @@ body.appendChild(para);
 inputButton.addEventListener('click', () => {
 	const citySearch = cityInput.value.toLowerCase();
 	if (citySearch) {
-        const cityUrl = `${baseUrl}&q=${citySearch}`;
-        resultsDiv.innerHTML = '';
-        para.textContent = '';
+		const cityUrl = `${baseUrl}&q=${citySearch}`;
+		resultsDiv.innerHTML = '';
+		para.textContent = '';
 		fetchJSONUrl(cityUrl).then(data => {
 			renderWeatherDetails(data);
 		});
@@ -29,8 +29,8 @@ inputButton.addEventListener('click', () => {
 });
 
 function renderWeatherDetails(weatherData) {
-    console.log(weatherData);
-    resultsDiv.innerHTML = '';
+	console.log(weatherData);
+	resultsDiv.innerHTML = '';
 
 	const cityHeading = document.createElement('h2');
 	cityHeading.innerHTML = `
@@ -73,8 +73,7 @@ function renderWeatherDetails(weatherData) {
     <li>Min Temperature: ${Math.floor(weatherData.main.temp_min - 273)}&#8451</li>
     `;
 
-    const mapDiv = document.createElement('div');
-    mapDiv.innerHTML = `<div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=${weatherData.name}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>`;
-    resultsDiv.appendChild(mapDiv);
-
+	const mapDiv = document.createElement('div');
+	mapDiv.innerHTML = `<div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=${weatherData.name}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>`;
+	resultsDiv.appendChild(mapDiv);
 }
