@@ -35,18 +35,43 @@ main {
     display: flex;
 }
 
-.press-S {
+.press-S,.press-L {
 height: 300px;  
-border-right: 1px solid black;
+width: 300px;
 padding-top: 100px;
-padding-right: 100px;
+padding-left: 90px;
 
 }
 
-.press-L {
-    padding-top: 100px;
-    padding-left: 90px;
+.press-S {
+    border-right: 1px solid black;
+}
+
+
+
+
+#canvas-s {
+    width: 350px;
+    height: 400px;
+    position: absolute;
+     top: 250px;
+    left:200px; 
 
 }
 
+#canvas-l {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 250px;
+    right: 200px;
+}
+
+#LS {
+    height: 400px;
+    width: 700px;
+    position: absolute;
+    top: 250px;
+
+}
 

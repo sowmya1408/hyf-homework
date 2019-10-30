@@ -22,11 +22,23 @@ function f() {
 	//     If(delay === 0)
 	if (countOfS > countOfL) {
 		keySText.textContent = 'S you won';
+		var confettiSettings = { target: 'canvas-s' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+
 	} else if (countOfL > countOfS) {
 		keyLText.textContent = 'L you won';
+		var confettiSettings = { target: 'canvas-l' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+
 	} else if ((countOfS = countOfL)) {
 		keySText.textContent = 'Its a draw';
 		keyLText.textContent = 'Its a draw';
+		var confettiSettings = { target: 'LS' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+
 	}
 	document.removeEventListener('keypress', logkeyCounter);
 }

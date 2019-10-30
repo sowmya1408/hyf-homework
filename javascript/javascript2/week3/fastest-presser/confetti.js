@@ -1,4 +1,4 @@
-export default function ConfettiGenerator(params) {
+function ConfettiGenerator(params) {
   //////////////
   // Defaults
   var appstate = {
