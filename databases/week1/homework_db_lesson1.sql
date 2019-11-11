@@ -34,7 +34,7 @@ limit 0,1;
 -- 7.Get the title and due date of all tasks where the title or description contains database
 select title, due_date 
 from task 
-where title LIKE '%database%';
+where title LIKE '%database%' or description LIKE '%database%';
 
 -- 8. Get the title and status (as text) of all tasks
 select task.title, status.name 
