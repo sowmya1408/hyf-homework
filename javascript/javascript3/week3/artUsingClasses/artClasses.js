@@ -48,26 +48,9 @@ const circle19 = new Circle(125, 60, 1, 0, 2 * Math.PI, '#fff');
 const circle20 = new Circle(75, 60, 1, 0, 2 * Math.PI, '#fff');
 const circle21 = new Circle(100, 85, 2.5, 0, 2 * Math.PI, 'black');
 
-
-circle1.draw();
-circle2.draw();
-circle3.draw();
-circle4.draw();
-circle5.draw();
-circle6.draw();
-circle7.draw();
-circle8.draw();
-circle9.draw();
-circle10.draw();
-circle11.draw();
-circle12.draw();
-circle13.draw();
-circle14.draw();
-circle15.draw();
-circle16.draw();
-circle17.draw();
-circle18.draw();
-circle19.draw();
-circle20.draw();
-circle21.draw();
-
+const circles = [circle1,circle2,circle3,circle4,circle5,
+                circle6,circle7,circle8,circle9,circle10,
+                circle11,circle12,circle13,circle14,circle15,
+                circle16,circle17,circle18,circle19,circle20,
+                circle21 ]
+circles.forEach(circle => circle.draw())
