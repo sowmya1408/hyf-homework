@@ -19,7 +19,22 @@ class Circle {
         ctx.fill();
     }
 }
+
+const x = function () {
+   return Math.floor(Math.random() * 1250);
+}
+const y = function() {  
+  return Math.floor(Math.random() * 1250);
+}  
+
+const radius = function () {
+    return Math.floor(Math.random() * 50);
+}
+
+const fillColor = function () {
+    return '#' + Math.floor(Math.random() * (256 * 256 * 256));
+}
 setInterval(() => {
-const newCircle = new Circle(Math.floor(Math.random() * 1250),Math.floor(Math.random() * 1250),Math.floor(Math.random() * 50), 0, 2 * Math.PI, `#${Math.floor(Math.random() * (256 * 256 * 256))}`)
+const newCircle = new Circle(x(),y(),radius(), 0, 2 * Math.PI, fillColor());
 return newCircle.draw(); 
 }, 500)
