@@ -6,16 +6,12 @@ class Product {
 
 	convertToCurrency(currency) {
 		if (currency.toLowerCase() === 'dollars') {
-			currency = this.price * 0.15;
-			return currency;
+			return currency = this.price * 0.15;
 		} else if (currency.toLowerCase() === 'indianrupees') {
-			currency = this.price * 10.51;
-			return currency;
+			return currency = this.price * 10.51;
 		} else if (currency.toLowerCase() === 'euro') {
-			currency = this.price * 0.13;
-			return currency;
+			return currency = this.price * 0.13;
 		}
-		return this.price;
 	}
 }
 const totalPrice = [];
@@ -67,7 +63,7 @@ class ShoppingCart {
 			const shoppingCartList = document.createElement('li');
 			shoppingCartList.textContent = `${product.name}`;
 			const para = document.querySelector('.paraTotal');
-			para.textContent = 'Total';
+			para.textContent = 'Total' + this.user.name;
 
 			ul.appendChild(shoppingCartList);
 			const shoppingUl = document.querySelector('.priceUl');
@@ -83,7 +79,10 @@ class ShoppingCart {
 		// Implement functionality here
 		fetch('https://jsonplaceholder.typicode.com/users/1')
 			.then(response => response.json())
-			.then(data => console.log(data.name))
+			.then(data => {
+				this.user = data;
+				this.renderProducts()
+			})
 			.catch(err => console.log(err));
 	}
 }
@@ -106,4 +105,4 @@ shoppingCart.getUser();
 shoppingCart.renderProducts();
 // convert To currency from dkk
 const plant = new Product('plant', 50);
-console.log(plant.convertToCurrency('danishkrone'));
+console.log(plant.convertToCurrency('indianrupees'));
