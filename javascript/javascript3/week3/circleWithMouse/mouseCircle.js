@@ -21,16 +21,16 @@ class Circle {
     }
 }
 
-const radius = function () {
-    return Math.floor(Math.random() * 50);
+const radius = function (r) {
+    return Math.floor(Math.random() * r);
 }
 
-const fillColor = function () {
-    return '#' + Math.floor(Math.random() * (256 * 256 * 256));
+const fillColor = function (colorNum) {
+    return '#' + Math.floor(Math.random() * colorNum);
 }
 
 document.addEventListener('mousemove', (event) => { 
-const newCircle = new Circle(event.clientX,event.clientY,radius(),0, 2 * Math.PI,fillColor());
+const newCircle = new Circle(event.clientX,event.clientY,radius(50),0, 2 * Math.PI,fillColor(256 * 256 * 256));
 return newCircle.draw(); 
 })
 
