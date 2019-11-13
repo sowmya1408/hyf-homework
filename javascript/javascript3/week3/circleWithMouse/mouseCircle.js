@@ -9,7 +9,8 @@ class Circle {
         this.endAngle = endAngle;
         this.fillColor = fillColor;
     }
-    draw() {
+
+     draw() {
        const canvas = document.querySelector('canvas');
        const ctx = canvas.getContext('2d');
         ctx.beginPath()
@@ -20,9 +21,16 @@ class Circle {
     }
 }
 
+const radius = function () {
+    return Math.floor(Math.random() * 50);
+}
+
+const fillColor = function () {
+    return '#' + Math.floor(Math.random() * (256 * 256 * 256));
+}
 
 document.addEventListener('mousemove', (event) => { 
-const newCircle = new Circle(event.clientX,event.clientY,Math.floor(Math.random() * 50), 0, 2 * Math.PI, `#${Math.floor(Math.random() * (256 * 256 * 256))}`)
+const newCircle = new Circle(event.clientX,event.clientY,radius(),0, 2 * Math.PI,fillColor());
 return newCircle.draw(); 
 })
 
