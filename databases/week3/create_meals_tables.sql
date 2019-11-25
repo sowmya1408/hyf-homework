@@ -20,7 +20,9 @@ create table meal (
 		number_of_guest int(10) unsigned NOT NULL,
 		meal_id int(10) unsigned NOT NULL,
 	    created_date DATETIME NOT NULL DEFAULT NOW(),
-	    PRIMARY KEY (id)
+	    PRIMARY KEY (id),
+		CONSTRAINT meal_id FOREIGN KEY (meal_id) REFERENCES meal (id) ON DELETE CASCADE,
+
         );
     
     create table review (
@@ -30,7 +32,9 @@ create table meal (
 		meal_id int(10) unsigned NOT NULL,
         stars int(10) unsigned NOT NULL,
 	    created_date DATETIME NOT NULL DEFAULT NOW(),
-		PRIMARY KEY (id)
+		PRIMARY KEY (id),
+	    CONSTRAINT meal_id FOREIGN KEY (meal_id) REFERENCES meal (id) ON DELETE CASCADE,
+
 );
         
 
