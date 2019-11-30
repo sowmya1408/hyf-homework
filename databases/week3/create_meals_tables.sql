@@ -8,9 +8,9 @@ create table meal (
 	  title varchar(255) NOT NULL,
 	  description text NULL default NULL,
 	  location varchar(255) NULL, 
-	  theday datetime NOT NULL, -- it was showing error if I use "When"
+	  `when` datetime NOT NULL, -- it was showing error if I use "When" can use `when` or any other word
 	  max_reservations int(10) unsigned NOT NULL,
-	  price decimal NOT NULL,
+	  price decimal(13, 4) NOT NULL,
 	  created_date DATETIME NOT NULL DEFAULT NOW(),
 	  PRIMARY KEY (id)
 	  );
@@ -21,7 +21,7 @@ create table meal (
 		meal_id int(10) unsigned NOT NULL,
 	    created_date DATETIME NOT NULL DEFAULT NOW(),
 	    PRIMARY KEY (id),
-		CONSTRAINT meal_id FOREIGN KEY (meal_id) REFERENCES meal (id) ON DELETE CASCADE,
+		CONSTRAINT meal_id FOREIGN KEY (fk_reservation_meal) REFERENCES meal (id) ON DELETE CASCADE
 
         );
     
@@ -33,7 +33,7 @@ create table meal (
         stars int(10) unsigned NOT NULL,
 	    created_date DATETIME NOT NULL DEFAULT NOW(),
 		PRIMARY KEY (id),
-	    CONSTRAINT meal_id FOREIGN KEY (meal_id) REFERENCES meal (id) ON DELETE CASCADE,
+	    CONSTRAINT meal_id FOREIGN KEY (fk_review_meal) REFERENCES meal (id) ON DELETE CASCADE
 
 );
         
