@@ -10,8 +10,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/", (req, res) => res.send("Error no page found"));
-
 
 const mealRouter = require("./routes/meals.js");
 app.use("/meals", mealRouter);

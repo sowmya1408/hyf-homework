@@ -12,7 +12,7 @@ const mealReview = mealParsedFile.map(meal => {
 });
 
 app.get('/', (req, res) => {
-	const filter = mealReview.filter(meal => meal.price >= 65);
+	const filter = mealReview.filter(meal => meal.maxNumberOfGuests === 5);
 	res.json(filter);
 });
 

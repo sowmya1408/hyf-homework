@@ -11,7 +11,7 @@
     {
         "id": 2,
         "title": "Indian Meal",
-        "maxNumberOfGuests": 5,
+        "maxNumberOfGuests": 4,
         "description": "eating delicious indian food",
         "createdAt": "2019/12/8 12:34",
         "price": 62
@@ -20,7 +20,7 @@
     {
       "id": 3,
       "title": "Indian Breakfast",
-      "maxNumberOfGuests": 5,
+      "maxNumberOfGuests": 3,
       "description": "delicious indian Breakfast, Dosa",
       "createdAt": "2019/15/8 10:34",
       "price": 40
