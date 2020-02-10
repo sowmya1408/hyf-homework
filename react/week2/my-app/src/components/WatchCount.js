@@ -10,7 +10,8 @@ const WatchCount = () => {
              clearTimeout(timer)
          }
 
-     })
+     },[count])
+
    return (
         <h2>
            You have used {count} seconds on this website
