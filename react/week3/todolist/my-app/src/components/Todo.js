@@ -2,6 +2,7 @@ import React from 'react';
 import FancyBorder from './FancyBorder'
 
 function Todo({completed, description, deadline, editMode, toggleItem, deleteItem, updateItem, editItem }) {
+	console.log("render");
 	const editView = () => {
         return <input 
         type="text" 
@@ -32,4 +33,14 @@ function Todo({completed, description, deadline, editMode, toggleItem, deleteIte
 	);
 }
 
-export default Todo;
+function areEqual(prevProps, nextProps) {
+
+   return prevProps.description === nextProps.description && prevProps.completed === nextProps.completed
+    /*
+    return true if passing nextProps to render would return
+    the same result as passing prevProps to render,
+    otherwise return false
+    */
+  }
+  export default React.memo(Todo, areEqual);
+
