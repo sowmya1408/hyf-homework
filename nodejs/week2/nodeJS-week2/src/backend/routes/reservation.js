@@ -8,8 +8,8 @@ reservationsRouter.get('/', (req, res) => {
 
 reservationsRouter.get('/:id', (req, res) => {
 	const { id } = req.params;
-	const reservationdetails = reservationFile.filter(reservation => reservation.id === parseInt(id));
-	res.send(reservationdetails);
+	const reservationDetails = reservationFile.filter(reservation => reservation.id === parseInt(id));
+	res.send(reservationDetails);
 });
 
 module.exports = reservationsRouter;

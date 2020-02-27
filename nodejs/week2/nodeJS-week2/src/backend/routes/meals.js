@@ -10,41 +10,43 @@ mealRouter.get('/', (req, res) => {
 mealRouter.get('/:id', (req, res) => {
 	const id = parseInt(req.params.id);
 	const mealsdetails = mealFile.filter(meal => meal.id === id);
-	mealsdetails.length > 0 && typeof id === 'number'
-		? res.send(mealsdetails)
+	const checkForMealData = mealsdetails.length > 0 && typeof id === 'number'
+	checkForMealData ? 
+	    res.send(mealsdetails)
 		: res.send('Bad request!, check if you are searching for correct mealId and its a number');
 });
 
 mealRouter.get('/api/meals', (req, res) => {
 	const maxPrice = parseInt(req.query.maxPrice);
-	const getMealSmallerThanMaxPrice = mealFile.filter(meal => meal.price < maxPrice);
-	!maxPrice 
-	   ? res.send('Bad Request!! check the query parameter') 
-	   : res.send(getMealSmallerThanMaxPrice);
+	const mealSmallerThanMaxPrice = mealFile.filter(meal => meal.price < maxPrice);
+	maxPrice 
+	   ? res.send(mealSmallerThanMaxPrice)
+	   : res.send('Bad Request!! check the query parameter')
+	   
 });
 
 mealRouter.get('/api/meals-title', (req, res) => {
 	const title = (req.query.title);
-	const getTitleMatch = mealFile.filter(meal => meal.title.includes(title));
-	!title 
-	  ? res.send('Bad request!! check the query parameter') 
-	  : res.send(getTitleMatch);
+	const mealsWithATitleMatch = mealFile.filter(meal => meal.title.includes(title));
+	title 
+	  ? res.send(mealsWithATitleMatch)
+	  : res.send('Bad Request!! check the query parameter')
 });
 
 mealRouter.get('/api/meals-createdAfter', (req, res) => {
 	const createdAfter = new Date(req.query.createdAfter).valueOf();
-	const mealCreatedAfter = mealFile.filter(meal => new Date(meal.createdAt).valueOf() > createdAfter);
-	!createdAfter 
-	  ? res.send('Bad request!! check the query parameter') 
-	  : res.send(mealCreatedAfter);
+	const mealsCreatedAfter = mealFile.filter(meal => new Date(meal.createdAt).valueOf() > createdAfter);
+	createdAfter 
+	  ?  res.send(mealsCreatedAfter)
+	  : res.send('Bad Request!! check the query parameter')
 });
 
 mealRouter.get('/api/meals-limit', (req, res) => {
 	const limit = parseInt(req.query.limit);
-	const meal = mealFile.slice(0, limit);
-	!limit 
-	  ? res.send('Bad request!! check the query parameter') 
-	  : res.send(meal);
+	const mealsLimit = mealFile.slice(0, limit);
+	limit 
+	  ? res.send(mealsLimit)
+	  : res.send('Bad Request!! check the query parameter')
 });
 
 module.exports = mealRouter;
