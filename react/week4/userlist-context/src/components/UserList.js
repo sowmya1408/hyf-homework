@@ -5,10 +5,12 @@ import {UserListContext} from './ListActions';
 const UserList = () => {
 	const name = useContext(UserListContext);
 	const { userName, loading, error } = name;
+	console.log(loading);
 	return (
 		<>
 		   <h3>{error}</h3>
-           {loading ? <LoaderComponent /> : <ul>
+           {loading ? <LoaderComponent /> : 
+		   <ul>
             {userName === undefined ? 
             'No results' 
             : userName.map(item => 

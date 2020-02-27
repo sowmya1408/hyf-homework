@@ -11,11 +11,13 @@ const ListActions = (props) => {
 
 console.log(userName);
     useEffect(() => {
+        setLoading(true)
         GetUserNames(inputText)
           .then(response => {
               const newData = response.items;
               setUserName(newData);
-              setLoading(!loading);
+              setLoading(false);
+              
           })
           .catch((err) =>{
             setError('Error')
