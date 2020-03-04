@@ -5,7 +5,6 @@ import {UserListContext} from './ListActions';
 const UserList = () => {
 	const name = useContext(UserListContext);
 	const { userName, loading, error } = name;
-	console.log(loading);
 	return (
 		<>
 		   <h3>{error}</h3>
