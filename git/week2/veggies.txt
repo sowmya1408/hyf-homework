@@ -1,5 +1,7 @@
 Potato
 Tomato
-beetroot
+cauliflower
 carrot
 spinach
+cabbage
+onions
